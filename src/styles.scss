@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+.width {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(50px, auto);
+  }
+  .one {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    border: 1px solid black;
+    //background-color: red;
+  }
+  .two { 
+    grid-column: 1/3;
+    grid-row: 2/11;
+    border: 1px solid black;
+  }
+  .three {
+    grid-column: 3;
+    grid-row: 2/11;
+    border: 1px solid black;
+  }
+  .middle {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: larger;
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(40px, 50px);
+    
+    text-align: center;
+  }
+  .four {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top:10px;
+  }
+  .five {
+    grid-column: 2;
+    grid-row: 1;
+    padding-top:10px;
+  }
+  .six {
+    grid-column: 3;
+    grid-row: 1;
+    padding-top:10px;
+  }
+  .seven {
+    grid-column: 4;
+    grid-row: 1;
+    padding-top:10px;
+  }
