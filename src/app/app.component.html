@@ -1,16 +1,25 @@
 <div class="width">
   <div class="wrapper">
     <div class="one">
-      <div class="menu">
-        <div class="four">Home</div>
+        <!-- <div class="four">Home</div>
         <div class="five">Lista videogiochi</div>
         <div class="six">Dettaglio videogioco</div>
-        <div class="seven">Modifica lista</div>
-
-      </div>
+        <div class="seven">Modifica lista</div>-->
+        <app-menu (selectMenuItem)="componentToShow = $event"></app-menu>
+      
     </div>
-    <div class="two">Two</div>
+    <div class="two">
+      
+      <div [ngSwitch]="componentToShow">
+        <app-home *ngSwitchCase="1"></app-home>
+        <app-game-list *ngSwitchCase="2"></app-game-list>
+        <app-edit-game *ngSwitchCase="3"></app-edit-game>
+        <app-game-detail *ngSwitchCase="4"></app-game-detail>
+      </div>
+      
+
+    </div>
     <div class="three">Three</div>
-    
+
   </div>
 </div>

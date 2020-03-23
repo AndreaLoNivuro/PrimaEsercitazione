@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PrimaEsercitazione';
+
+  componentToShow: number = 1;
 }

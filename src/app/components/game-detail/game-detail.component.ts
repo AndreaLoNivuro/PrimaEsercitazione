@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameDetailComponent implements OnInit {
 
+  componentToShow: number = 3;
+
   constructor() { }
 
   ngOnInit(): void {

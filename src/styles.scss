@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 .width {
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -13,13 +13,16 @@
   .one {
     grid-column: 1 / 4;
     grid-row: 1;
-    border: 1px solid black;
+    //border: 1px solid black;
+    background-color: #e0ffff;
+    //#87cefa
     //background-color: red;
   }
   .two { 
     grid-column: 1/3;
     grid-row: 2/11;
-    border: 1px solid black;
+    padding: 15px;
+    //border: 1px solid black;
   }
   .three {
     grid-column: 3;

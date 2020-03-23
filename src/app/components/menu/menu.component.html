@@ -1,1 +1,13 @@
-<p>menu works!</p>
+<!--<ul>
+    <li *ngFor="let menuItem of menuList" [class.active]="menuItem.selezionato">
+        {{ menuItem.descrizione}}
+    <button (click)="selectedComponent(menuItem.id)"></button>
+    </li>
+</ul>-->
+<div class="menu">
+    <div (click)="selectedComponent(menuItem.id)" *ngFor="let menuItem of menuList" [ngClass] = "myStyles(menuItem.id)">
+        {{ menuItem.descrizione}}
+    <!--<button (click)="selectedComponent(menuItem.id)"></button>-->
+    </div>
+</div>
+    

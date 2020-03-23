@@ -1,0 +1,41 @@
+.active {
+    font-weight: bold;
+}
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(40px, 50px);
+  
+  text-align: center;
+}
+.four:hover {
+  background-color: #87cefa;
+  padding: 10px;
+}
+.five:hover {
+  background-color: #87cefa;
+}
+.six:hover {
+  background-color: #87cefa;
+}
+.four {
+  grid-column: 1;
+  grid-row: 1;
+  padding-top:10px;
+}
+.five {
+  grid-column: 2;
+  grid-row: 1;
+  padding-top:10px;
+}
+.six {
+  grid-column: 3;
+  grid-row: 1;
+  padding-top:10px;
+}
+.seven {
+  grid-column: 4;
+  grid-row: 1;
+  padding-top:10px;
+}
