@@ -1,1 +1,18 @@
-<p>login works!</p>
+<h1>Benvenuto!</h1>
+<h2>Accedi per visualizzare il contenuto del sito.</h2>
+<div>
+    <div>
+        <label for="user">Inserisci Username:</label>
+    </div>
+    <input type="text" id="user" [(ngModel)]="username">
+
+    <div>
+        <label for="psw">Inserisci Password:</label>
+    </div>
+    <input type="password" id="psw" [(ngModel)]="password">
+
+    <div>
+        <button (click)="login()" type="submit">Login</button>
+    </div>
+    
+</div>

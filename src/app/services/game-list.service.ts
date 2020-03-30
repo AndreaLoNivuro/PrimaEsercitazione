@@ -8,7 +8,10 @@ import { NodeWithI18n } from '@angular/compiler';
 export class GameListService {
 
   private gameListStored: GameItem[] = [
-    { id: 1, name: 'gioco1', descrizione: 'descrizione1', genere: 'genere1', prezzo: '5.00', annoUscita: new Date()}
+    { id: 1, name: 'gioco1', descrizione: 'descrizione1', genere: 'genere1', prezzo: '5.00', annoUscita: new Date()},
+    { id: 2, name: 'gioco2', descrizione: 'descrizione2', genere: 'genere2', prezzo: '6.00', annoUscita: new Date()},
+    { id: 3, name: 'gioco3', descrizione: 'descrizione3', genere: 'genere3', prezzo: '7.00', annoUscita: new Date()},
+    { id: 4, name: 'gioco4', descrizione: 'descrizione4', genere: 'genere4', prezzo: '8.00', annoUscita: new Date()}
   ];
 
   constructor() { }

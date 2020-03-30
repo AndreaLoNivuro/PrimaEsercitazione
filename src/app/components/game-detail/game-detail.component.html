@@ -1,6 +1,43 @@
 <p>game-detail works!</p>
-<p>ID: {{ game?.id }}</p>
-<p>Nome: {{ game?.name }}</p>
-<p>Genere: {{ game?.genere }}</p>
-<p>Data rilascio: {{ game?.annoUscita }}</p>
-<p>Descrizione: {{ game?.descrizione }}</p>
+<table>
+    <tr>
+        <td>
+            ID:
+        </td>
+        <td>
+            {{ game?.id }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Nome:
+        </td>
+        <td>
+            {{ game?.name }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Genere:
+        </td>
+        <td>
+            {{ game?.genere }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Data rilascio:
+        </td>
+        <td>
+            {{ game?.annoUscita | date }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Descrizione:
+        </td>
+        <td>
+            {{ game?.descrizione }}
+        </td>
+    </tr>
+</table>
