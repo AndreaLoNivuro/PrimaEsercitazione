@@ -23,18 +23,13 @@ export class MenuComponent implements OnInit {
   }
 
   myStyles(id: number) {
-    //for (let menuItem of this.menuList) {
-      if (id === 1) {
-        return 'four';
-      } else if (id === 2) {
-        return 'five';
-      } else if (id === 3) {
-        return 'six';
-      }
-    //four: this.menuList[0];
-    //five: this.menuList[1];
-    //six: this.menuList[2],
-    
+    if (id === 1) {
+      return 'four';
+    } else if (id === 2) {
+      return 'five';
+    } else if (id === 3) {
+      return 'six';
+    }
   }
 
   selectedComponent(id: number) {

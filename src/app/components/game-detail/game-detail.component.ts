@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { GameItem } from 'src/app/models/game-item.interface';
 import { GameListService } from 'src/app/services/game-list.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-game-detail',
@@ -9,17 +10,17 @@ import { GameListService } from 'src/app/services/game-list.service';
 })
 export class GameDetailComponent implements OnInit {
 
-  //componentToShow: number = 3;
+  gameList: GameItem[] = [];
 
-  @Input()
-  gameId: number;
-  
   game: GameItem;
+  constructor(private route: ActivatedRoute, private gameListService: GameListService) {
+    this.gameList = this.gameListService.getGameList();
+  }
 
-  constructor(private gameListService: GameListService) { }
-
-  ngOnInit(): void {
-    this.game = this.gameListService.getGameItem(this.gameId);
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.game = this.gameListService.getGameItem(Number(params.get("id")));
+    })
   }
 
 }

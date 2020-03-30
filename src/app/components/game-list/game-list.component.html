@@ -1,4 +1,8 @@
 <p>game-list works!</p>
-<ul>
+<!--<ul>
     <li *ngFor="let item of gameList" (click)="showDetail(item.id)">{{ item.name }}</li>
+</ul>-->
+
+<ul>
+    <li *ngFor="let item of gameList" routerLink="/game-detail/{{ item.id }}" routerLinkActive="active">{{ item.name }}</li>
 </ul>

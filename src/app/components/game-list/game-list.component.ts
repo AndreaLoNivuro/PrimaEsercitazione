@@ -9,9 +9,6 @@ import { GameItem } from 'src/app/models/game-item.interface';
 })
 export class GameListComponent implements OnInit {
 
-  @Output('showDetail')
-  showDetailEvent: EventEmitter<number> = new EventEmitter();
-
   gameList: GameItem[] = [];
 
   constructor( private gameListService: GameListService) {
@@ -19,10 +16,6 @@ export class GameListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  showDetail(id: number) {
-    this.showDetailEvent.emit(id);
   }
 
 }

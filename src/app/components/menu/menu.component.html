@@ -1,13 +1,18 @@
-<!--<ul>
-    <li *ngFor="let menuItem of menuList" [class.active]="menuItem.selezionato">
-        {{ menuItem.descrizione}}
-    <button (click)="selectedComponent(menuItem.id)"></button>
-    </li>
-</ul>-->
-<div class="menu">
+<!--<div class="menu">
     <div (click)="selectedComponent(menuItem.id)" *ngFor="let menuItem of menuList" [ngClass] = "myStyles(menuItem.id)">
         {{ menuItem.descrizione}}
-    <!--<button (click)="selectedComponent(menuItem.id)"></button>-->
+    </div>
+</div>-->
+
+<div class="menu">
+    <div routerLink="/home" routerLinkActive="active" class="four">
+        Home
+    </div>
+    <div routerLink="/game-list" routerLinkActive="active" class="five">
+        Lista giochi
+    </div>
+    <div routerLink="/edit-game" routerLinkActive="active" class="six">
+        Modifica gioco
     </div>
 </div>
     

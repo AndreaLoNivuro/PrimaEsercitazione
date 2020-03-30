@@ -7,7 +7,10 @@ import { HomeComponent } from './components/home/home.component';
 import { GameDetailComponent } from './components/game-detail/game-detail.component';
 import { EditGameComponent } from './components/edit-game/edit-game.component';
 import { GameListComponent } from './components/game-list/game-list.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/login/login.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
+import { EsercitazioneRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,12 @@ import { LoginComponent } from './login/login.component';
     GameDetailComponent,
     EditGameComponent,
     GameListComponent,
-    LoginComponent
+    LoginComponent,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    EsercitazioneRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

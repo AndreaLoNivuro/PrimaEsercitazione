@@ -1,25 +1,12 @@
 <div class="width">
   <div class="wrapper">
     <div class="one">
-        <!-- <div class="four">Home</div>
-        <div class="five">Lista videogiochi</div>
-        <div class="six">Dettaglio videogioco</div>
-        <div class="seven">Modifica lista</div>-->
-        <app-menu (selectMenuItem)="componentToShow = $event"></app-menu>
+        <app-menu></app-menu>
       
     </div>
     <div class="two">
-      
-      <div [ngSwitch]="componentToShow">
-        <app-home *ngSwitchCase="1"></app-home>
-        <app-game-list *ngSwitchCase="2" (showDetail)='showDetailPage($event)'></app-game-list>
-        <app-edit-game *ngSwitchCase="3"></app-edit-game>
-        <app-game-detail *ngSwitchCase="4" [gameId]="gameIdForDetail"></app-game-detail>
-      </div>
-      
-
+      <router-outlet></router-outlet>
     </div>
-    <div class="three">Three</div>
 
   </div>
 </div>
