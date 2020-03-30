@@ -10,7 +10,12 @@ export class RouteGuardService implements CanActivate  {
   constructor(private router: Router) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    //this.router.navigateByUrl('/home');
-    return true;
+    if (sessionStorage.getItem('user') != null) {
+      return true;
+    } else {
+      this.router.navigateByUrl('/login');
+      return false;
+    }
+    
   }
 }

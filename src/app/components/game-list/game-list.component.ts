@@ -11,6 +11,8 @@ export class GameListComponent implements OnInit {
 
   gameList: GameItem[] = [];
 
+  idSelezionato: number;
+
   constructor( private gameListService: GameListService) {
     this.gameList = this.gameListService.getGameList();
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { GameItem } from 'src/app/models/game-item.interface';
 import { GameListService } from 'src/app/services/game-list.service';
 import { ActivatedRoute } from '@angular/router';
@@ -8,19 +8,23 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './game-detail.component.html',
   styleUrls: ['./game-detail.component.scss']
 })
-export class GameDetailComponent implements OnInit {
+export class GameDetailComponent implements OnInit, OnChanges {
 
-  gameList: GameItem[] = [];
+  @Input()
+  gameID: number;
 
   game: GameItem;
   constructor(private route: ActivatedRoute, private gameListService: GameListService) {
-    this.gameList = this.gameListService.getGameList();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.game = this.gameListService.getGameItem(this.gameID);
   }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
+    /*this.route.paramMap.subscribe(params => {
       this.game = this.gameListService.getGameItem(Number(params.get("id")));
-    })
+    })*/
   }
 
 }

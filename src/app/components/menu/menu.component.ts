@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MenuItem } from 'src/app/models/menu-item.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,8 +9,8 @@ import { MenuItem } from 'src/app/models/menu-item.interface';
 })
 export class MenuComponent implements OnInit {
 
-  @Output()
-  selectMenuItem: EventEmitter<number> = new EventEmitter<number>();
+  //currentRoute: string = null;
+  isLog: string = sessionStorage.getItem('user');
 
   menuList: MenuItem[] = [
     {id: 1, descrizione: 'Home', selezionato: true},
@@ -17,27 +18,15 @@ export class MenuComponent implements OnInit {
     {id: 3, descrizione: 'Modifica gioco', selezionato: false},
   ]
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    
   }
 
-  myStyles(id: number) {
-    if (id === 1) {
-      return 'four';
-    } else if (id === 2) {
-      return 'five';
-    } else if (id === 3) {
-      return 'six';
-    }
-  }
-
-  selectedComponent(id: number) {
-    for (let menuItem of this.menuList) {
-      menuItem.selezionato = id === menuItem.id;
-    }
-    //condizione ? espressione1 : espressione2 
-    this.selectMenuItem.emit(id);
+  logout() {
+    sessionStorage.removeItem('user');
+    this.router.navigateByUrl('/login');
   }
 
 }

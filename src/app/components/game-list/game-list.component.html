@@ -1,8 +1,8 @@
 <div class="wrapper">
     <div class="two">
-        <li *ngFor="let item of gameList" routerLink="/game-detail/{{ item.id }}" routerLinkActive="active">{{ item.name }}</li>
+        <li *ngFor="let item of gameList" (click)="idSelezionato = item.id">{{ item.name }}</li>
     </div>
     <div class="three">
-
+        <app-game-detail *ngIf="idSelezionato != null" [gameID]="idSelezionato"></app-game-detail>
     </div>
 </div>
