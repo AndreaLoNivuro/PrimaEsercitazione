@@ -27,6 +27,7 @@ export class MenuComponent implements OnInit {
 
   logout() {
     sessionStorage.removeItem('user');
+    sessionStorage.removeItem('tipoUtente');
     this.router.navigateByUrl('/login');
   }
 
