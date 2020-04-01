@@ -9,7 +9,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./game-detail.component.scss']
 })
 export class GameDetailComponent implements OnInit, OnChanges {
-
+  
+  isAdmin: string = sessionStorage.getItem('tipoUtente');
+  
   @Input()
   gameID: number;
 

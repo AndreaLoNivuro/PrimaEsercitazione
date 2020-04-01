@@ -5,4 +5,5 @@ export interface GameItem {
     genere: string;
     prezzo: string;
     annoUscita: Date;
+    immagine: string;
 }

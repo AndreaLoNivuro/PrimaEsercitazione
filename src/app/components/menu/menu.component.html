@@ -1,9 +1,3 @@
-<!--<div class="menu">
-    <div (click)="selectedComponent(menuItem.id)" *ngFor="let menuItem of menuList" [ngClass] = "myStyles(menuItem.id)">
-        {{ menuItem.descrizione}}
-    </div>
-</div>-->
-
 <div class="menu">
     <div routerLink="/home" routerLinkActive="active" class="four">
         Home
@@ -11,7 +5,7 @@
     <div routerLink="/game-list" routerLinkActive="active" class="five">
         Lista giochi
     </div>
-    <div routerLink="/edit-game" routerLinkActive="active" class="six">
+    <div *ngIf="isAdmin == 'admin'"  routerLink="/edit-game" routerLinkActive="active" class="six">
         Modifica gioco
     </div>
 

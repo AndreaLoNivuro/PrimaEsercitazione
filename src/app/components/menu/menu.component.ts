@@ -11,6 +11,7 @@ export class MenuComponent implements OnInit {
 
   //currentRoute: string = null;
   isLog: string = sessionStorage.getItem('user');
+  isAdmin: string = sessionStorage.getItem('tipoUtente');
 
   menuList: MenuItem[] = [
     {id: 1, descrizione: 'Home', selezionato: true},

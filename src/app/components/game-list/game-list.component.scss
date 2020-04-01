@@ -1,18 +1,25 @@
 
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(50px, auto);
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(50px, auto);
+}
 .two { 
-    grid-column: 1;
-    grid-row: 1/11;
-    padding: 15px;
-    //border: 1px solid black;
-  }
-  .three {
-    grid-column: 2/4;
-    grid-row: 1/11;
-    border: 1px solid black;
-  }
+  grid-column: 1;
+  grid-row: 1/11;
+  padding: 15px;
+  //border: 1px solid black;
+}
+.three {
+  grid-column: 2/4;
+  grid-row: 1/11;
+  border: 1px solid black;
+}
+img {
+  height: 50px;
+  width: 50px;
+}
+.game {
+  border: 1px solid #E0FFFF;
+}

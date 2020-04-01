@@ -1,6 +1,9 @@
 <div class="wrapper">
     <div class="two">
-        <li *ngFor="let item of gameList" (click)="idSelezionato = item.id">{{ item.name }}</li>
+        <div *ngFor="let item of gameList" (click)="idSelezionato = item.id" class="game">
+            <img src="{{ item.immagine }}"> 
+            {{ item.name }}
+        </div>
     </div>
     <div class="three">
         <app-game-detail *ngIf="idSelezionato != null" [gameID]="idSelezionato"></app-game-detail>

@@ -1,43 +1,26 @@
-<p>game-detail works!</p>
+<h1>{{ game?.name }}</h1>
+
 <table>
+    <tr *ngIf="isAdmin == 'admin'">
+        <td>ID:</td>
+        <td>{{ game?.id }}</td>
+    </tr>
+    <!--<tr>
+        <td>Nome:</td>
+        <td>{{ game?.name }}</td>
+    </tr>-->
     <tr>
-        <td>
-            ID:
-        </td>
-        <td>
-            {{ game?.id }}
-        </td>
+        <td>Genere:</td>
+        <td>{{ game?.genere }}</td>
     </tr>
     <tr>
-        <td>
-            Nome:
-        </td>
-        <td>
-            {{ game?.name }}
-        </td>
+        <td>Data rilascio:</td>
+        <td>{{ game?.annoUscita | date }}</td>
     </tr>
     <tr>
-        <td>
-            Genere:
-        </td>
-        <td>
-            {{ game?.genere }}
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Data rilascio:
-        </td>
-        <td>
-            {{ game?.annoUscita | date }}
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Descrizione:
-        </td>
-        <td>
-            {{ game?.descrizione }}
-        </td>
+        <td>Descrizione:</td>
+        <td>{{ game?.descrizione }}</td>
     </tr>
 </table>
+
+
