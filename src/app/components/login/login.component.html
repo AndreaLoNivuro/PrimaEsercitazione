@@ -1,6 +1,11 @@
 <h1>Benvenuto!</h1>
 <h2>Accedi per visualizzare il contenuto del sito.</h2>
-<div>
+
+<button (click)="loginAdmin()" type="button">ADMIN</button>
+<button (click)="loginUser()" type="button">UTENTE</button>
+
+
+<div *ngIf="tipoUtente != null" >
     <div>
         <label for="user">Inserisci Username:</label>
     </div>
@@ -12,7 +17,7 @@
     <input type="password" id="psw" [(ngModel)]="password">
 
     <div>
-        <button (click)="login()" type="submit">Login</button>
+        <button (click)="login(tipoUtente)" type="submit">Login</button>
     </div>
     
 </div>

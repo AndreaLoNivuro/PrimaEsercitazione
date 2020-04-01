@@ -8,6 +8,7 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent implements OnInit {
 
+  tipoUtente: string;
   username: string;
   password: string;
 
@@ -16,8 +17,16 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login() {
-    this.loginService.eseguiLogin(this.username, this.password);
+  loginAdmin() {
+    this.tipoUtente = 'admin';
+  }
+
+  loginUser() {
+    this.tipoUtente = 'user';
+  }
+
+  login(tipoUtente: string) {
+    this.loginService.eseguiLogin(this.username, this.password, this.tipoUtente);
   }
 
 }
