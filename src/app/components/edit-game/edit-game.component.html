@@ -1,3 +1,40 @@
 <h2>Inserisci l'ID del gioco da modificare:</h2>
 <input type="text" [(ngModel)]="gameID">
 <button type="submit" (click)="trovaGioco()">Cerca</button>
+
+<div *ngIf="game != null">
+    <div>
+        <input type="text" id="id" [value]='gameID' [(ngModel)]="gameID">
+    </div>
+    <!--<div>
+        <input type="text" id="nome" [value]="gameName" [(ngModel)]="gameName">
+    </div>
+    <div>
+        <textarea type="text" id="descrizione" [value]="gameDescrizione" rows="4" cols="30" [(ngModel)]="gameDescrizione">
+    </div>
+    <div>
+        <select id="genere" [value]="gameGenere" [(ngModel)]="gameGenere">
+            <option value="avventura">Avventura</option>
+            <option value="horror">Horror</option>
+        </select>
+        <input type="text" id="nome" [value]="gameGenere">
+    </div>
+    <div>
+        <input type="number" id="prezzo" [value]="gamePrezzo" [(ngModel)]="gamePrezzo">
+    </div>
+    <div>
+        <input type="text" id="annoUscita" [value]="gameAnnoUscita" [(ngModel)]="gameAnnoUscita">
+    </div>
+    <div>
+        <input type="text" id="immagine" [value]="gameImmagine" [(ngModel)]="gameImmagine">
+    </div>-->
+</div>
+
+<!-- gameID: number;
+  gameName: string;
+  gameDescrizione: string;
+  gameGenere: string;
+  gamePrezzo: string;
+  gameAnnoUscita: Date;
+  gameImmagine: string;
+-->

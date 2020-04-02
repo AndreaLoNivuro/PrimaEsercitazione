@@ -9,9 +9,17 @@ import { GameListService } from 'src/app/services/game-list.service';
   styleUrls: ['./edit-game.component.scss']
 })
 export class EditGameComponent implements OnInit {
-
-  gameID: number;
+  
   game: GameItem;
+  
+  gameID: number;
+  gameName: string;
+  gameDescrizione: string;
+  gameGenere: string;
+  gamePrezzo: string;
+  gameAnnoUscita: Date;
+  gameImmagine: string;
+  
   
   constructor(private route: ActivatedRoute, private gameListService: GameListService) { }
 
