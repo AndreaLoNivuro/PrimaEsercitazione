@@ -1,15 +1,15 @@
 <h2>Inserisci l'ID del gioco da modificare:</h2>
-<input type="text" [(ngModel)]="gameID">
+<input type="text" [(ngModel)]="idRicerca">
 <button type="submit" (click)="trovaGioco()">Cerca</button>
 
-<div *ngIf="game != null">
+<div *ngIf="trovatoGame">
     <div>
-        <input type="text" id="id" [value]='gameID' [(ngModel)]="gameID">
+        <input type="text" id="id" [value]='gameID'>
     </div>
-    <!--<div>
+    <div>
         <input type="text" id="nome" [value]="gameName" [(ngModel)]="gameName">
     </div>
-    <div>
+    <!--<div>
         <textarea type="text" id="descrizione" [value]="gameDescrizione" rows="4" cols="30" [(ngModel)]="gameDescrizione">
     </div>
     <div>

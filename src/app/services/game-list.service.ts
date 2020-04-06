@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { GameItem } from '../models/game-item.interface';
-import { NodeWithI18n } from '@angular/compiler';
+import { NodeWithI18n, isNgTemplate } from '@angular/compiler';
+import { stringify } from 'querystring';
 
 @Injectable({
   providedIn: 'root'
@@ -25,5 +26,24 @@ export class GameListService {
       return item.id === id;
     });
   }
+
+  /*getGameName(id: number): string {
+    if (item.id === id) {
+      this.gameListStored.find(item => {
+        return item.name;
+      });
+    }
+    let name: string = this.gameListStored.find(item => {
+      item.id === id;
+      return item.name;
+    });
+    for (let item in this.gameListStored) {
+      if (item[0] == (String(id)) {
+        item[1];
+      }
+        
+    }
+    
+  }*/
   
 }
