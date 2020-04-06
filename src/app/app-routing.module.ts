@@ -8,13 +8,15 @@ import { GameListComponent } from './components/game-list/game-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { RouteGuardService } from './services/route-guard.service';
+import { RouteGuardLoginService } from './services/route-guard-login.service';
+import { RouteGuardEditService } from './services/route-guard-edit.service';
 
 const appRoutes: Routes = [
-    { path: 'login', component: LoginComponent },
+    { path: 'login', component: LoginComponent, canActivate: [RouteGuardLoginService] },
     { path: 'home', component: HomeComponent, canActivate: [RouteGuardService] },
     { path: 'game-list', component: GameListComponent, canActivate: [RouteGuardService] },
     { path: 'game-detail/:id', component: GameDetailComponent, canActivate: [RouteGuardService] },
-    { path: 'edit-game', component: EditGameComponent, canActivate: [RouteGuardService] },
+    { path: 'edit-game', component: EditGameComponent, canActivate: [RouteGuardService, RouteGuardEditService] },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent },
 ];

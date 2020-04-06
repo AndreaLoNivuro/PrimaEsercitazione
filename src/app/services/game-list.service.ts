@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { GameItem } from '../models/game-item.interface';
 import { NodeWithI18n, isNgTemplate } from '@angular/compiler';
 import { stringify } from 'querystring';
+import { GenereGame } from '../models/genere-game.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,12 @@ export class GameListService {
     { id: 2, name: 'gioco2', descrizione: 'descrizione2', genere: 'genere2', prezzo: '6.00', annoUscita: new Date(), immagine: '../assets/img/img1.jpg'},
     { id: 3, name: 'gioco3', descrizione: 'descrizione3', genere: 'genere3', prezzo: '7.00', annoUscita: new Date(), immagine: '../assets/img/img1.jpg'},
     { id: 4, name: 'gioco4', descrizione: 'descrizione4', genere: 'genere4', prezzo: '8.00', annoUscita: new Date(), immagine: '../assets/img/img1.jpg'}
+  ];
+
+  private genereList: GenereGame[] = [
+    { id: 1, description: 'azione' },
+    { id: 2, description: 'avventura' },
+    { id: 1, description: 'boh' },
   ];
 
   constructor() { }
