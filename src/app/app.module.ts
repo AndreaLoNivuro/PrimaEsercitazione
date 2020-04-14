@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 import { EsercitazioneRoutingModule } from './app-routing.module';
+import { GameListDirective } from './directives/game-list.directive';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,13 @@ import { EsercitazioneRoutingModule } from './app-routing.module';
     EditGameComponent,
     GameListComponent,
     LoginComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    GameListDirective,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    EsercitazioneRoutingModule
+    EsercitazioneRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

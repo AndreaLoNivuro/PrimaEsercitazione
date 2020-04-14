@@ -1,6 +1,14 @@
 <div class="wrapper">
     <div class="two">
-        <div *ngFor="let item of gameList" (click)="idSelezionato = item.id" class="game">
+        <form>
+            <select>
+                <option>Tutti</option>
+                <option>Azione</option>
+                <option>Avventura</option>
+                <option>Boh</option>
+            </select>
+        </form>
+        <div appGameList *ngFor="let item of gameList" (click)="idSelezionato = item.id" class="game" >
             <img src="{{ item.immagine }}"> 
             {{ item.name }}
         </div>
